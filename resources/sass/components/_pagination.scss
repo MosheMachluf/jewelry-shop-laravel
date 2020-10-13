@@ -1,0 +1,35 @@
+.pagination * {
+    border: none !important;
+    border-radius: 0 !important;
+    cursor: pointer;
+    transition: var(--fast);
+}
+
+.pagination {
+    margin: $sm 0 !important;
+    display: flex !important;
+    border-radius: 10px !important;
+    padding: 0 !important;
+    justify-content: center;
+
+    .page-item span,
+    .page-item a {
+        display: block !important;
+        padding: 1rem !important;
+        background: #000 !important;
+        color: var(--gold) !important;
+
+        &:hover {
+            color: var(--gold-light) !important;
+            background: rgba(0, 0, 0, 0.8) !important;
+
+        }
+    }
+
+    .page-item.active span {
+        color: #000 !important;
+        background: var(--gold) !important;
+    }
+
+}
+

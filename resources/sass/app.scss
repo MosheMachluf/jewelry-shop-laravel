@@ -1,0 +1,24 @@
+@import url("https://fonts.googleapis.com/css2?family=Heebo:wght@400;600;900&display=swap");
+
+@import "base";
+@import "utils";
+
+@import "components/menus";
+@import "components/preloader";
+@import "components/messages";
+@import "components/buttons";
+@import "components/forms";
+@import "components/tables";
+@import "components/pagination";
+@import "components/breadcrumbs";
+
+@import "instagram";
+@import "carousel";
+
+@import "pages/home";
+@import "pages/shop";
+@import "pages/products";
+@import "pages/product-page";
+
+@import "cms/dashboard";
+@import "cms/orders";

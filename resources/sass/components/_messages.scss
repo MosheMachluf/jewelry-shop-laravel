@@ -1,0 +1,46 @@
+.card.silver,
+.card.gold {
+    @extend .radius-sm;
+
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card.gold {
+    background: var(--gold);
+    background: linear-gradient(45deg,
+            var(--gold-dark) -100%,
+            var(--gold-light) 80%);
+}
+
+.card.silver {
+    background: var(--silver);
+    background: linear-gradient(45deg, silver, var(--silver) 60%);
+    background: linear-gradient(to right, #bdc5cc, #dbe4e4);
+}
+
+.card.gold .icon,
+.card.silver .icon {
+    font-size: 3rem;
+    padding-top: 10px;
+}
+
+.ui.vertical.segment:not(.inverted) {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+}
+
+.ui.message {
+    border-left: 6px solid;
+    margin-bottom: 1rem !important;
+}
+
+.footer.segment {
+    padding: 5rem 0rem;
+}
+
+.ui.grid {
+    margin: 0;
+}

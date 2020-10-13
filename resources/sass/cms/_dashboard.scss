@@ -1,0 +1,53 @@
+$padding-item: 1rem;
+
+.main_dashboard {
+    background: #f9f9f9;
+    min-height: 90vh;
+    width: 100%;
+    padding: 2.5rem !important;
+    margin: 0;
+
+    @media #{$breakpoint_sm},
+    #{$breakpoint_md} {
+        padding: 2rem !important;
+        flex: 0 0 100% !important;
+    }
+}
+
+.dashboard-summery {
+
+    .summery-item {
+        padding: $padding-item;
+        flex: 0 0 25%;
+
+        @media #{$breakpoint_md},
+        #{$breakpoint_lg} {
+            flex: 0 0 50%;
+        }
+
+        @media #{$breakpoint_sm} {
+            flex: 0 0 100%;
+        }
+    }
+}
+
+
+.shortcuts {
+    flex: 0 0 50%;
+    padding-left: $padding-item;
+    padding-right: $padding-item;
+
+    @media #{$breakpoint_sm},
+    #{$breakpoint_md} {
+        flex: 0 0 100%;
+    }
+}
+
+
+.logo {
+    img {
+        @media #{$breakpoint-sm} {
+            height: 30px;
+        }
+    }
+}

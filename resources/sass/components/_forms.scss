@@ -1,0 +1,27 @@
+.ui.input input {
+    text-align: right;
+}
+
+.ui.dropdown,
+.ui.dropdown * {
+    text-align: right !important;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    border-color: var(--gold) !important;
+}
+
+.row .ui.form {
+    flex: 0 0 50%;
+    margin: 0 auto;
+
+    @media #{$breakpoint_sm} {
+        flex: 0 0 100%;
+    }
+
+    @media #{$breakpoint_md} {
+        flex: 0 0 80%;
+    }
+}

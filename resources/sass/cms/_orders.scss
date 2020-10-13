@@ -1,0 +1,5 @@
+.ui.stackable.four.column.grid .column {
+    @media #{$breakpoint_lg} {
+        flex: 0 0 50%;
+    }
+}

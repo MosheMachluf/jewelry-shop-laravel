@@ -1,0 +1,38 @@
+/* .ui.basic.button {
+    color: #24292e !important;
+    background-color: #fafbfc !important;
+    border: 1px solid rgba(27, 31, 35, .15);
+    box-shadow: 0 1px 0 rgba(27, 31, 35, .04), inset 0 1px 0 hsla(0, 0%, 100%, .25);
+} */
+
+.ui.button.primary {
+    background: linear-gradient(100deg, #87682c, #fcd77e);
+    background: $gold-grad;
+    color: #000;
+    transition: var(--normal);
+    box-shadow: 0 1px 0px rgba(0, 0, 0, 0.1) !important;
+}
+
+.ui.button.primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2) !important;
+}
+
+.ui.basic.button.primary {
+    color: var(--gold-dark) !important;
+    box-shadow: 0 0 0 1px var(--gold-dark) inset !important;
+}
+
+.ui.basic.button.primary:hover {
+    background: #fffef5 !important;
+    color: var(--gold-dark) !important;
+    box-shadow: 0 0 0 1px var(--gold-dark) inset !important;
+}
+
+.button-lg {
+    width: 150px;
+    height: 50px;
+    font-size: 1.25rem !important;
+}
+
+.button-sm {}

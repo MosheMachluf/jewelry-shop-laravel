@@ -1,0 +1,91 @@
+.home {
+
+    h2 {
+        @extend .h3;
+        @extend .my-md;
+    }
+
+    .category-item {
+        position: relative;
+        padding: $flex-gap-items-xl;
+        flex: 1 0 25%;
+
+        @media #{$breakpoint_lg} {
+            padding: $flex-gap-items-lg;
+            flex: 1 0 33.3%;
+        }
+
+        @media #{$breakpoint_sm},
+        #{$breakpoint_md} {
+            padding: $flex-gap-items-md;
+            flex: 1 0 50%;
+        }
+
+        .image {
+            max-height: 300px;
+
+            h3 {
+                font-size: 2rem;
+                color: #fff;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                margin: 0;
+                transition: var(--normal);
+                z-index: 1;
+
+
+                @media #{$breakpoint_sm} {
+                    font-size: 1.5rem;
+                }
+            }
+        }
+
+        p {
+            opacity: 0;
+            background: rgba(255, 255, 255, 0.7);
+            padding: 1rem;
+            text-align: justify;
+            transition: var(--fast);
+            display: none;
+        }
+    }
+
+}
+
+
+
+.bg-hover::after {
+    content: "";
+    background: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: var(--fast);
+}
+
+.bg-hover:hover::after {
+    opacity: 1;
+}
+
+/* hover */
+
+.category-item:hover .image::after {
+    opacity: 1;
+}
+
+.hover-img:hover img {
+    transform: scale(1.2);
+}
+
+.category-item:hover h3 {
+    transform: scale(1.2) translate(-40%, -40%);
+}
+
+.category-item:hover p {
+    opacity: 1;
+}

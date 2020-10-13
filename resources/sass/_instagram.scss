@@ -1,0 +1,48 @@
+.set-bg {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center;
+}
+
+.instagram_item {
+    height: 320px;
+    flex: 1 0 20%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    transition: var(--normal);
+
+    @media #{$breakpoint_sm} {
+        flex: 1 0 100%;
+    }
+
+    @media #{$breakpoint_md} {
+        flex: 1 0 50%;
+    }
+}
+
+.instagram_text {
+    direction: ltr;
+    text-align: center;
+    color: #fff;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 1;
+    transition: var(--normal);
+
+    span {
+        display: block;
+        margin-top: 10px;
+    }
+
+    .icon {
+        font-size: 2rem;
+    }
+}
+
+.instagram_item:hover .instagram_text {
+    visibility: visible;
+    opacity: 1;
+}

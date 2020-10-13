@@ -1,0 +1,31 @@
+body.show-spinner main.main_dashboard>*,
+body.show-spinner main>* {
+    opacity: 0;
+}
+
+body.show-spinner::after {
+    content: "";
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    border: 2px solid rgba(0, 0, 0, 0.2);
+    border-radius: 50%;
+    border-top-color: rgba(0, 0, 0, 0.3);
+    animation: spin 1s ease-in-out infinite;
+    -webkit-animation: spin 1s ease-in-out infinite;
+    left: calc(50% - 15px);
+    top: calc(50% - 15px);
+    position: fixed;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@-webkit-keyframes spin {
+    to {
+        -webkit-transform: rotate(360deg);
+    }
+}

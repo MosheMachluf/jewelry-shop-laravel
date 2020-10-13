@@ -1,0 +1,7 @@
+.ui.breadcrumb {
+    @extend .center;
+
+    background: var(--border);
+    height: 50px;
+    width: 100%;
+}
