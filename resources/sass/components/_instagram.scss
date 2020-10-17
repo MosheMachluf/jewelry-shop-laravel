@@ -14,11 +14,7 @@
     position: relative;
     transition: var(--normal);
 
-    @media #{$breakpoint_sm} {
-        flex: 1 0 100%;
-    }
-
-    @media #{$breakpoint_md} {
+    @media #{$breakpoint_sm}, #{$breakpoint_md} {
         flex: 1 0 50%;
     }
 }

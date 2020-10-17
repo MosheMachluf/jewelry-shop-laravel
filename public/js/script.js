@@ -20,14 +20,13 @@ $(".number-format").each(function () {
 
 
 let openNav = false;
-
 function toggleNav() {
     if (!openNav) {
         $('#nav-toggle').attr('style', 'right: 0%;');
         $('.overlay').fadeIn(500);
         disableScroll();
     } else {
-        $('#nav-toggle').attr('style', 'right: -50%;');
+        $('#nav-toggle').attr('style', 'right: -100%;');
         $('.overlay').fadeOut(500);
         enableScroll();
     }
@@ -36,16 +35,30 @@ function toggleNav() {
 
 $('#hamburger').on('click', toggleNav);
 
+const MAX_MEDIUM_SCREEN = 868;
+
 $(window).on('resize', function () {
-    if (window.innerWidth >= 768 && openNav == true) {
-        toggleNav();
-        openNav = false;
+    if(this.innerWidth >= MAX_MEDIUM_SCREEN) {
+
+        if (openNav) toggleNav();
+
+        if (openFilterProd) filterSidebarCategories();
+
     }
 });
 
-// left: 37, up: 38, right: 39, down: 40,
-// spacebar: 32, pageup: 33, pagedown: 34, end: 35, home: 36
-var keys = {
+$(window).on('click', function(e) {
+    if( $(e.target).hasClass('overlay') ){
+
+        if (openNav) toggleNav();
+
+        if (openFilterProd) filterSidebarCategories();
+
+    }
+});
+
+
+let keys = {
     37: 1,
     38: 1,
     39: 1,
@@ -64,7 +77,7 @@ function preventDefaultForScrollKeys(e) {
 }
 
 // modern Chrome requires { passive: false } when adding event
-var supportsPassive = false;
+let supportsPassive = false;
 try {
     window.addEventListener("test", null, Object.defineProperty({}, 'passive', {
         get: function () {
@@ -73,10 +86,10 @@ try {
     }));
 } catch (e) {}
 
-var wheelOpt = supportsPassive ? {
+let wheelOpt = supportsPassive ? {
     passive: false
 } : false;
-var wheelEvent = 'onwheel' in document.createElement('div') ? 'wheel' : 'mousewheel';
+let wheelEvent = 'onwheel' in document.createElement('div') ? 'wheel' : 'mousewheel';
 
 // call this to Disable
 function disableScroll() {

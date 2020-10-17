@@ -123,4 +123,48 @@
     </section>
 </div>
 
+<section class="instagram mt-sm">
+    <div class="row">
+        <a href="#" class="instagram_item set-bg bg-hover"
+            style="background-image: url({{ asset('images/instagram/insta-1.jpg') }});">
+            <div class="instagram_text">
+                <i class="instagram icon"></i>
+                <span>@mosh_jewelry</span>
+            </div>
+        </a>
+
+        <a href="#" class="instagram_item set-bg bg-hover"
+            style="background-image: url({{ asset('images/instagram/insta-2.jpg') }});">
+            <div class="instagram_text">
+                <i class="instagram icon"></i>
+                <span>@mosh_jewelry</span>
+            </div>
+        </a>
+
+        <a href="#" class="instagram_item set-bg bg-hover"
+            style="background-image: url({{ asset('images/instagram/insta-3.jpg') }});">
+            <div class="instagram_text">
+                <i class="instagram icon"></i>
+                <span>@mosh_jewelry</span>
+            </div>
+        </a>
+
+        <a href="#" class="instagram_item set-bg bg-hover"
+            style="background-image: url({{ asset('images/instagram/insta-4.jpg') }});">
+            <div class="instagram_text">
+                <i class="instagram icon"></i>
+                <span>@mosh_jewelry</span>
+            </div>
+        </a>
+
+        <a href="#" class="instagram_item set-bg bg-hover"
+            style="background-image: url({{ asset('images/instagram/insta-5.jpg') }});">
+            <div class="instagram_text">
+                <i class="instagram icon"></i>
+                <span>@mosh_jewelry</span>
+            </div>
+        </a>
+    </div>
+</section>
+
 @endsection

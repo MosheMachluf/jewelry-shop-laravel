@@ -25,11 +25,6 @@ function activeLink(&$u){
     </script>
 </head>
 
-{{-------------- ********* --------------}}
-{{-------------- TODO LIST --------------}}
-{{-------------- ********* --------------}}
-{{-- login with facebook --}}
-
 <body class="show-spinner">
     <header>
         <div class="main-nav">
@@ -174,63 +169,17 @@ function activeLink(&$u){
         @yield('main_content')
     </main>
 
-    <section class="instagram mt-sm">
-        <div class="row">
-            <a href="#" class="instagram_item set-bg bg-hover"
-                style="background-image: url({{ asset('images/instagram/insta-1.jpg') }});">
-                <div class="instagram_text">
-                    <i class="instagram icon"></i>
-                    <span>@mosh_jewelry</span>
-                </div>
-            </a>
 
-            <a href="#" class="instagram_item set-bg bg-hover"
-                style="background-image: url({{ asset('images/instagram/insta-2.jpg') }});">
-                <div class="instagram_text">
-                    <i class="instagram icon"></i>
-                    <span>@mosh_jewelry</span>
-                </div>
-            </a>
-
-            <a href="#" class="instagram_item set-bg bg-hover"
-                style="background-image: url({{ asset('images/instagram/insta-3.jpg') }});">
-                <div class="instagram_text">
-                    <i class="instagram icon"></i>
-                    <span>@mosh_jewelry</span>
-                </div>
-            </a>
-
-            <a href="#" class="instagram_item set-bg bg-hover"
-                style="background-image: url({{ asset('images/instagram/insta-4.jpg') }});">
-                <div class="instagram_text">
-                    <i class="instagram icon"></i>
-                    <span>@mosh_jewelry</span>
-                </div>
-            </a>
-
-            <a href="#" class="instagram_item set-bg bg-hover"
-                style="background-image: url({{ asset('images/instagram/insta-5.jpg') }});">
-                <div class="instagram_text">
-                    <i class="instagram icon"></i>
-                    <span>@mosh_jewelry</span>
-                </div>
-            </a>
-        </div>
-    </section>
 
     <footer class="ui inverted vertical footer segment">
         <div class="ui container center aligned">
             <a href="{{ url('/') }}" class="center">
                 <img src="{{ asset('images/logo.png') }}">
             </a>
-            <div class="ui horizontal inverted small divided link list">
-                <a class="item" href="#">Site Map</a>
-                <a class="item" href="#">Contact Us</a>
-                <a class="item" href="#">Terms and Conditions</a>
-                <a class="item" href="#">Privacy Policy</a>
-            </div>
-            <h4 class="tac">Moshe Machluf</h4>
-            <p class="tac">&copy; {{ date('Y') }}</p>
+            <h4 class="tac">Mosh's Jewelry</h4>
+            <p class="tac">&copy; {{ date('Y') }} Moshe Machluf</p>
+            <a href="https://moshe-machluf.netlify.app/" target="_blank">Portfolio</a> -
+            <a href="https://github.com/MosheMachluf?tab=repositories" target="_blank">Github</a>
         </div>
     </footer>
 

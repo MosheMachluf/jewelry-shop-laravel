@@ -13,7 +13,25 @@
             <div class="product-content">
                 <div class="product-details">
                     <h1 class="product-page-title">{{ $product['title'] }}</h1>
-                    <div class="product-page-price number-format my-md">&#8362;{{ $product['price'] }}</div>
+
+                    @if(!$product['sale_price'])
+
+                    <div class="product-page-price number-format my-md">
+                        &#8362;{{ $product['price'] }}
+                    </div>
+
+                    @else
+
+                    <div class="product-page-price my-md">
+                        <span class="number-format original-price">
+                            &#8362;{{ $product['price'] }}
+                        </span>
+                        <span class="number-format text-danger">
+                            &#8362;{{ $product['sale_price'] }}
+                        </span>
+                    </div>
+                    @endif
+
                     <p>{!! $product['article'] !!}</p>
                 </div>
 

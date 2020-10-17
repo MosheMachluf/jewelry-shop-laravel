@@ -1,22 +1,11 @@
-.sidebar-categories {
-    flex: 0 0 20%;
-min-width: 200px;
-    @media #{$breakpoint_sm},
-    #{$breakpoint_md} {
-        display: none !important;
-    }
-}
-
 .products {
     padding: 1rem;
     flex: 0 0 80%;
 
     .header {
-        padding: 10px;
+        padding: $flex-gap-items-xl;
         justify-content: space-between;
         align-items: center;
-        flex-wrap: wrap;
-        font-size: 1.25rem;
 
         .counter-results {
 
@@ -30,19 +19,27 @@ min-width: 200px;
                 margin-top: $sm;
             }
         }
-
-        .choose-display {
-
-            .icon {}
-        }
-
-        .sort-products {}
     }
 
     @media #{$breakpoint_sm},
     #{$breakpoint_md} {
         flex: 0 0 100%;
         margin: 0 auto !important;
+    }
+
+    @media #{$breakpoint_lg} {
+        flex: 0 0 70%;
+    }
+
+    #filter-products-mobile-btn {
+        display: none;
+
+        @media #{$breakpoint_sm},
+        #{$breakpoint_md} {
+            display: block;
+            width: 100%;
+            margin-bottom: $sm;
+        }
     }
 }
 

@@ -3,10 +3,10 @@
 
 <div class="ui container wide">
     <section class="section catalog">
-        <div class="row">
-            <div class="ui secondary vertical pointing menu sidebar-categories">
+        <div class="row" style="flex-wrap: nowrap;">
+            <div class="sidebar-categories">
                 <div class="item">
-                    <div class="header tac">קטגוריות</div>
+                    <div class="header-title">קטגוריות</div>
                 </div>
                 <a href="{{ url($u = 'shop/sale') }}"
                     class="item text-danger {{ $u == request()->path() ? 'active' : '' }}">
@@ -19,10 +19,10 @@
                 </a>
                 @endforeach
                 <div class="item">
-                    <div class="header tac">סינון</div>
+                    <div class="header-title">סינון</div>
                     <form action="">
                         <label for="">טווח מחירים</label>
-                        <input type="range" name="" id="">
+                        <input type="range" name="filter-price">
                         <button>סנן</button>
                     </form>
                 </div>
@@ -32,7 +32,11 @@
             <div class="products">
                 <h1>{{ str_replace('Mosh\'s Jewelry | ','', $title) }}</h1>
 
+
+
                 <div class="row header">
+                    <button class="ui button basic secondary" id="filter-products-mobile-btn">סינון</button>
+
                     <div class="choose-display">
                         <strong>
                             תצוגה:

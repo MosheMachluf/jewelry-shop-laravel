@@ -14,7 +14,7 @@
 
 @if (request()->display === 'table')
 
-<div class="ui segment shadow mt-2">
+<div class="ui segment shadow mt-md">
     <table class="ui very basic selectable table">
         <thead>
             <tr>
@@ -70,7 +70,7 @@
 
 @else
 
-<div class="ui stackable four column grid mt-2">
+<div class="ui stackable four column grid mt-md">
 
     @foreach ($orders as $order)
     <div class="column">
