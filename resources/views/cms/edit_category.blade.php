@@ -17,15 +17,14 @@ $err_image = $errors->first('image');
     {{ method_field('PUT') }}
     <div class="field {{ $err_title ? 'error' : null }}">
         <label for="title-field">כותרת</label>
-        <input type="text" name="title" id="title-field" class="url-field" placeholder="כותרת"
+        <input type="text" name="title" id="title-field" class="url-field"
             value="{{ old('title') ?? $category['title'] }}">
         <span class="text-danger">{{ $err_title }}</span>
     </div>
     <div class="field {{ $err_url ? 'error' : null }}">
         <label for="url-field">כתובת הקטגוריה ( Url )</label>
         <small>תווים מורשים: אותיות קטנות באנגלית ומקפים (-)</small>
-        <input type="text" name="url" id="url-field" class="to-permalink" placeholder="כתובת הקטגוריה ( Url )"
-            value="{{ old('url') ?? $category['url'] }}">
+        <input type="text" name="url" id="url-field" class="to-permalink" value="{{ old('url') ?? $category['url'] }}">
         <span class="text-danger">{{ $err_url }}</span>
     </div>
     <div class="field {{ $err_article ? 'error' : null }}">
@@ -37,7 +36,7 @@ $err_image = $errors->first('image');
     <div class="field {{ $err_image ? 'error' : null }}">
         <img src="{{ asset("images/{$category['image']}")}}" width="100" alt="">
         <label for="image-field">העלאת תמונה</label>
-        <input type="file" name="image" id="image-field" placeholder="בחר קובץ" value="{{ old('article') }}">
+        <input type="file" name="image" id="image-field" value="{{ old('article') }}">
         <span class="text-danger">{{ $err_image }}</span>
     </div>
 

@@ -21,7 +21,7 @@ $err_image = $errors->first('image');
     <div class="two fields">
         <div class="field {{ $err_title ? 'error' : null }}">
             <label for="title-field">כותרת</label>
-            <input type="text" name="title" id="title-field" class="url-field" placeholder="כותרת"
+            <input type="text" name="title" id="title-field" class="url-field"
                 value="{{ old('title') ?? $product['title'] }}">
             <span class="text-danger">{{ $err_title }}</span>
         </div>
@@ -44,7 +44,7 @@ $err_image = $errors->first('image');
     <div class="three fields">
         <div class="field {{ $err_url ? 'error' : null }}">
             <label for="url-field">כתובת המוצר ( Url )</label>
-            <input type="text" name="url" id="url-field" class="to-permalink" placeholder="כתובת המוצר ( Url )"
+            <input type="text" name="url" id="url-field" class="to-permalink"
                 value="{{ old('url') ?? $product['url'] }}">
             <small>תווים מורשים: אותיות קטנות באנגלית ומקפים (-)</small>
             <span class="text-danger">{{ $err_url }}</span>
@@ -52,14 +52,13 @@ $err_image = $errors->first('image');
 
         <div class="field {{ $err_price ? 'error' : null }}">
             <label for="price-field">מחיר</label>
-            <input type="number" name="price" id="price-field" placeholder="מחיר"
-                value="{{ old('price') ?? $product['price'] }}">
+            <input type="number" name="price" id="price-field" value="{{ old('price') ?? $product['price'] }}">
             <span class="text-danger">{{ $err_price }}</span>
         </div>
 
         <div class="field {{ $err_sale_price ? 'error' : null }}">
             <label for="sale-price-field">מחיר מבצע</label>
-            <input type="text" name="sale_price" id="sale-price-field" placeholder="מחיר מבצע"
+            <input type="text" name="sale_price" id="sale-price-field"
                 value="{{ old('sale_price') ?? $product['sale_price']}}">
             <span class="text-danger">{{ $err_sale_price }}</span>
         </div>
@@ -73,8 +72,7 @@ $err_image = $errors->first('image');
 
     <div class="field {{ $err_image ? 'error' : null }}">
         <label for="image-field">העלאת תמונה</label>
-        <input type="file" name="image" id="image-field" value="{{ old('image') ?? $product['image'] }}"
-            placeholder="בחר קובץ">
+        <input type="file" name="image" id="image-field" value="{{ old('image') ?? $product['image'] }}">
         <span class="text-danger">{{ $err_image }}</span>
     </div>
 

@@ -15,14 +15,13 @@ $err_image = $errors->first('image');
     {{ csrf_field() }}
     <div class="field {{ $err_title ? 'error' : null }}">
         <label for="title-field">כותרת</label>
-        <input type="text" name="title" id="title-field" placeholder="כותרת" value="{{ old('title') }}">
+        <input type="text" name="title" id="title-field" value="{{ old('title') }}">
         <span class="text-danger">{{ $err_title }}</span>
     </div>
     <div class="field {{ $err_url ? 'error' : null }}">
         <label for="url-field">כתובת הקטגוריה ( Url )</label>
         <small>תווים מורשים: אותיות קטנות באנגלית ומקפים (-)</small>
-        <input type="text" name="url" id="url-field" class="to-permalink" placeholder="כתובת הקטגוריה ( Url )"
-            value="{{ old('url') }}">
+        <input type="text" name="url" id="url-field" class="to-permalink" value="{{ old('url') }}">
         <span class="text-danger">{{ $err_url }}</span>
     </div>
     <div class="field {{ $err_article ? 'error' : null }}">
@@ -33,7 +32,7 @@ $err_image = $errors->first('image');
 
     <div class="field {{ $err_image ? 'error' : null }}">
         <label for="image-field">העלאת תמונה</label>
-        <input type="file" name="image" id="image-field" value="{{ old('image') }}" placeholder="בחר קובץ">
+        <input type="file" name="image" id="image-field" value="{{ old('image') }}">
         <span class="text-danger">{{ $err_image }}</span>
     </div>
 

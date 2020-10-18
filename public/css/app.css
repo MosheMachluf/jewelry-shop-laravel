@@ -449,6 +449,13 @@ a:hover {
   }
 }
 
+label.hide {
+  position: absolute;
+  top: -2000px;
+  left: -2000px;
+  overflow: hidden;
+}
+
 .ui.secondary.pointing.menu .item {
   padding: 1.5rem;
 }

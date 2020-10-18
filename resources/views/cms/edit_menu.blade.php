@@ -16,21 +16,18 @@ $err_url = $errors->first('url');
     <input type="hidden" name="item_id" value="{{ $item['id'] }}">
     <div class="field {{ $err_link ? 'error' : null }}">
         <label for="link-field">לינק</label>
-        <input type="text" name="link" id="link-field" class="url-field" placeholder="לינק"
-            value="{{ old('link') ?? $item['link'] }}">
+        <input type="text" name="link" id="link-field" class="url-field" value="{{ old('link') ?? $item['link'] }}">
         <span class="text-danger">{{ $err_link }}</span>
     </div>
     <div class="field {{ $err_title ? 'error' : null }}">
         <label for="title-field">כותרת</label>
-        <input type="text" name="title" id="title-field" placeholder="כותרת"
-            value="{{ old('title') ?? $item['title'] }}">
+        <input type="text" name="title" id="title-field" value="{{ old('title') ?? $item['title'] }}">
         <span class="text-danger">{{ $err_title }}</span>
     </div>
     <div class="field {{ $err_url ? 'error' : null }}">
         <label for="url-field">כתובת הדף ( Url )</label>
         <small>תווים מורשים: אותיות קטנות באנגלית ומקפים (-)</small>
-        <input type="text" name="url" id="url-field" class="to-permalink" placeholder="כתובת הדף ( Url )"
-            value="{{ old('url') ?? $item['url'] }}">
+        <input type="text" name="url" id="url-field" class="to-permalink" value="{{ old('url') ?? $item['url'] }}">
         <span class="text-danger">{{ $err_url }}</span>
     </div>
 
