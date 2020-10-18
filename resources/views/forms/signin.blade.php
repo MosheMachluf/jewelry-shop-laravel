@@ -18,11 +18,11 @@
         <div class="row">
             <form class="ui form" method="POST" action="">
                 @csrf
-                <div class="field">
+                <div class="field overflow-hidden">
                     <label for="email" class="hide">אימייל</label>
                     <input type="text" name="email" id="email" placeholder="אימייל" value="{{ old('email') }}">
                 </div>
-                <div class="field">
+                <div class="field overflow-hidden">
                     <label for="password" class="hide">סיסמה</label>
                     <input type="password" name="password" id="password" placeholder="סיסמה">
                 </div>

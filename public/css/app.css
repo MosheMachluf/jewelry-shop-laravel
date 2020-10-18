@@ -450,8 +450,11 @@ a:hover {
 }
 
 .field {
-  overflow: hidden;
   position: relative !important;
+}
+
+.overflow-hidden {
+  overflow: hidden;
 }
 
 label.hide {
@@ -497,12 +500,12 @@ label.hide {
   display: block !important;
 }
 
-.ui.secondary.menu .dropdown.simple.item > .menu {
+.main-nav .ui.secondary.menu .dropdown.simple.item > .menu {
   margin-top: 0;
 }
 
 @media (min-width: 0px) and (max-width: 576px), (min-width: 577px) and (max-width: 868px) {
-  .ui.secondary.menu .dropdown.simple.item > .menu {
+  .main-nav .ui.secondary.menu .dropdown.simple.item > .menu {
     position: fixed;
     max-width: 9px !important;
     right: 50%;
@@ -510,7 +513,7 @@ label.hide {
     background: #000;
   }
 
-  .ui.secondary.menu .dropdown.simple.item > .menu a {
+  .main-nav .ui.secondary.menu .dropdown.simple.item > .menu a {
     color: #fff !important;
   }
 }

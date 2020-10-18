@@ -124,11 +124,15 @@ function toggleSearch(){
     if(!openSearch){
         $('div.item.search').removeClass('only-desktop');
         $('.toolbar .logo').hide();
+        $('.toolbar .hamburger').hide();
+        $('.toolbar .item.shopping-cart').hide();
         $('.search-mobile i.icon').removeClass('search').addClass('times');
         openSearch = true;
     } else {
         $('div.item.search').addClass('only-desktop');
         $('.toolbar .logo').show();
+        $('.toolbar .hamburger').show();
+        $('.toolbar .item.shopping-cart').show();
         $('.search-mobile i.icon').addClass('search').removeClass('times');
         openSearch = false;
     }

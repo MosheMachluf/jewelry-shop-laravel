@@ -54,7 +54,7 @@ function activeLink(&$u){
                             <span>חיפוש</span>
                         </a>
 
-                        <a href="{{ url($u = 'shop/checkout') }}" class="item {{ activeLink($u) }}">
+                        <a href="{{ url($u = 'shop/checkout') }}" class="item shopping-cart {{ activeLink($u) }}">
                             <i class="shopping cart icon" data-cart="{{ Cart::getTotalQuantity() }}"></i>
                             <span>
                                 עגלת קניות
@@ -168,8 +168,6 @@ function activeLink(&$u){
 
         @yield('main_content')
     </main>
-
-
 
     <footer class="ui inverted vertical footer segment">
         <div class="ui container center aligned">

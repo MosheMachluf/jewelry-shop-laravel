@@ -34,22 +34,23 @@
     }
 }
 
-.ui.secondary.menu .dropdown.simple.item>.menu {
-    margin-top: 0;
+.main-nav {
+    .ui.secondary.menu  .dropdown.simple.item>.menu {
+        margin-top: 0;
 
-    @media #{$breakpoint_sm},
-    #{$breakpoint_md} {
-        position: fixed;
-        max-width: 9px !important;
-        right: 50%;
-        top: 173px !important;
-        background: #000;
+        @media #{$breakpoint_sm},
+        #{$breakpoint_md} {
+            position: fixed;
+            max-width: 9px !important;
+            right: 50%;
+            top: 173px !important;
+            background: #000;
 
-        a{
-            color: #fff !important;
+            a{
+                color: #fff !important;
+            }
         }
     }
-
 }
 
 // shop side bar
