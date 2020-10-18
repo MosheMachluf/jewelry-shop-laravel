@@ -292,6 +292,11 @@
 
 }
 
+.field{
+   overflow: hidden;
+   position: relative !important;
+}
+
 label.hide{
     position: absolute;
     top: -2000px;
