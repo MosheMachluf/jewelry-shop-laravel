@@ -45,7 +45,7 @@ class UserController extends MainController {
         self::$data['breadcrumbs'] = [
             'דף הבית'  =>url('/'),
         ];
-        return view('forms.Signup', self::$data);
+        return view('forms.signup', self::$data);
     }
 
     public function postSignup(SignupRequest $req){
